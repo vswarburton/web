@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Victoria's Icecream</title>
+	<style>
+	button { width: 40pt; height: 40pt; border: none; display: inline-block }
+</style>
+<script>
+function changeColor(col) {
+	document.getElementById("icecream").style.fill = col;
+}
+</script>
+</head>
+<body id="body">
+	<h1>Victoria's Icecream</h1>
+
+<svg width="200" height="200" viewBox="0 0 200 200">
+	<circle id="icecream" r="50" cx="100" cy="60" fill="red" />
+	<path d="M50 75 L100 175 L150 75" stroke-width="3" stroke="black" fill="brown"/> 
+</svg>
+
+<button style="background: red" onclick="changeColor('red')">&nbsp;</button>
+<button style="background: orange" onclick="changeColor('orange')">&nbsp;</button>
+<button style="background: yellow" onclick="changeColor('yellow')">&nbsp;</button>
+<button style="background: green"  onclick="changeColor('green')">&nbsp;</button>
+<button style="background: blue" onclick="changeColor('blue')">&nbsp;</button>
+<button style="background: indigo" onclick="changeColor('indigo')">&nbsp;</button>
+<button style="background: violet" onclick="changeColor('violet')">&nbsp;</button>
+<button style="background: white" onclick="changeColor('white')">&nbsp;</button>
+</body>
+</html>

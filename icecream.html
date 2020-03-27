@@ -2,24 +2,50 @@
 
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Victoria's Icecream</title>
 	<style>
 	button { width: 40pt; height: 40pt; border: none; display: inline-block }
 </style>
 <script>
+
+var current;	
+
 function changeColor(col) {
-	document.getElementById("icecream").style.fill = col;
+	current.style.fill = col;
 }
+
+window.onload = function() {
+	current = document.getElementById("first");
+}
+
 </script>
 </head>
 <body id="body">
 	<h1>Victoria's Icecream</h1>
+<p>
 
-<svg width="200" height="200" viewBox="0 0 200 200">
-	<circle id="icecream" r="50" cx="100" cy="60" fill="red" />
-	<path d="M50 75 L100 175 L150 75" stroke-width="3" stroke="black" fill="brown"/> 
+<svg width="160" height="240" viewBox="0 -50 160 240" >
+<circle r="50" cx="100" cy="60" onclick="current = this" fill="red" id="first"/>
+<path d="M60 30 A50 50 1 1 1 140 30L60 30" onclick="current = this" fill="red"/>
+<path d="M50 75 L100 175 L150 75" stroke-width="3" stroke="black" fill="brown"/> 
 </svg>
+
+<svg width="160" height="240" viewBox="0 -50 160 240" >
+<circle r="50" cx="100" cy="60" onclick="current = this" fill="red" />
+<path d="M60 30 A50 50 1 1 1 140 30L60 30" onclick="current = this" fill="red"/>
+<path d="M50 75 L100 175 L150 75" stroke-width="3" stroke="black" fill="brown"/> 
+</svg>
+
+<svg width="160" height="240" viewBox="0 -50 160 240" >
+<circle r="50" cx="100" cy="60" onclick="current = this" fill="red" />
+<path d="M60 30 A50 50 1 1 1 140 30L60 30" onclick="current = this" fill="red"/>
+<path d="M50 75 L100 175 L150 75" stroke-width="3" stroke="black" fill="brown"/> 
+</svg>
+
+</p>
 
 <button style="background: red" onclick="changeColor('red')">&nbsp;</button>
 <button style="background: orange" onclick="changeColor('orange')">&nbsp;</button>
